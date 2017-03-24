@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<script>
+    function updateAndRedirect(value) {
+        if (sessionStorage["score"] == undefined) {
+            sessionStorage["score"] = 0;
+        }
+        var score = parseInt(sessionStorage["score"]);
+        if (value === "+") {
+            console.log("Increase");
+            score++;
+        }
+        else if (value === "-") {
+            console.log("Decrease");
+            score--;
+        }
+        sessionStorage["score"] = score;
+        console.log(score);
+        window.location.href = "/{{ page.next_page }}";
+    }
+</script>
+
+<div class="row">
+    <div class="col-md-12">
+        <p>{{ page.question.question_text}}</p>
+
+        <ul>
+        {% for option in page.question.options %}
+            <li><a href="#" onclick="updateAndRedirect('{{ option.value }}')">{{ option.text }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{{ content }}{% comment %} Just in case. {% endcomment %}

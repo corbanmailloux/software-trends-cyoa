@@ -1,0 +1,26 @@
+/*
+ * Insert any additional CSS/SCSS we need.
+ */
+/*
+// Remove the gradient of the navbar
+.navbar {
+    background-color: #654e2f; 
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-repeat: no-repeat;
+    filter: none;
+}
+*/
+
+body { 
+    padding-top: 70px; // Padding for the fixed navbar
+    padding-bottom: 30px; // Keep buttons off the bottom of the page
+}
+
+.page-header {
+    margin-top: 0; // Too big without this
+}
