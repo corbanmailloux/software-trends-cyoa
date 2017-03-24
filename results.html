@@ -1,0 +1,19 @@
+---
+title:      "How'd you do?"
+---
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="page-header">
+            <h1 class="text-center">You scored a <span id="score"></span>!</h1>
+        </div>
+    </div>
+</div>
+
+<script>
+  var score = sessionStorage["score"];
+  if (score == undefined) {
+    score = 0;
+  }
+  document.getElementById('score').innerText = score;
+</script>

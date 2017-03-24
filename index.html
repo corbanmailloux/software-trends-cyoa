@@ -2,10 +2,18 @@
 title:      "Start the adventure"
 ---
 
+<script>
+    function resetValue() {
+      console.log(`Score was ${sessionStorage["score"]}`);
+      sessionStorage["score"] = 0;
+      window.location.href = "/q1";
+    }
+</script>
+
 <div class="row">
     <div class="col-xs-12">
         <div class="page-header">
-            <h1 class="text-center"><a href="/q1">Start the Adventure!</a></h1>
+            <h1 class="text-center"><a href="#" onclick="resetValue()">Start the Adventure!</a></h1>
         </div>
     </div>
 </div>
